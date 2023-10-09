@@ -84,7 +84,7 @@ export default function Home() {
                 />
             </Head>
             <main>
-                <div className="container py-5">
+                <div className="container pt-4">
                     <h3 className="mb-1">Spacer Algo</h3>
                     <p className="mb-4">
                         Showcasing the power of automated playlist content
@@ -108,9 +108,9 @@ export default function Home() {
                                             className="col-lg-6 content-collection mb-4"
                                             key={index}
                                         >
-                                            <h4 className="text-capitalize">
+                                            <h5 className="text-capitalize">
                                                 {key}
-                                            </h4>
+                                            </h5>
                                             <div className="row">
                                                 {generatedContentData[key].map(
                                                     (value, valueIndex) => (

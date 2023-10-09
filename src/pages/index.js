@@ -85,7 +85,7 @@ export default function Home() {
             </Head>
             <main>
                 <div className="container py-5">
-                    <h1 className="mb-1">Spacer Algo</h1>
+                    <h3 className="mb-1">Spacer Algo</h3>
                     <p className="mb-4">
                         Showcasing the power of automated playlist content
                         ordering
@@ -95,46 +95,53 @@ export default function Home() {
                     <hr />
 
                     <div className="generated-content-area">
-                        <h2 className="mb-1">Generated Content Data</h2>
+                        <h3 className="mb-1">Generated Content Data</h3>
                         <p className="mb-4">
                             Dummy contents based on user input
                         </p>
 
-                        {generatedContentData &&
-                            Object.keys(generatedContentData).map(
-                                (key, index) => (
-                                    <div
-                                        className="content-collection mb-3"
-                                        key={index}
-                                    >
-                                        <h4 className="text-capitalize">
-                                            {key}
-                                        </h4>
-                                        <div className="row">
-                                            {generatedContentData[key].map(
-                                                (value, valueIndex) => (
-                                                    <div
-                                                        className="col-lg-1 mb-3"
-                                                        key={valueIndex}
-                                                    >
-                                                        <div className="box shadow rounded p-2 d-flex align-items-end justify-content-end">
-                                                            <h5 className="m-0">
-                                                                {value}
-                                                            </h5>
+                        <div className="row">
+                            {generatedContentData &&
+                                Object.keys(generatedContentData).map(
+                                    (key, index) => (
+                                        <div
+                                            className="col-lg-6 content-collection mb-4"
+                                            key={index}
+                                        >
+                                            <h4 className="text-capitalize">
+                                                {key}
+                                            </h4>
+                                            <div className="row">
+                                                {generatedContentData[key].map(
+                                                    (value, valueIndex) => (
+                                                        <div
+                                                            className="col-lg-2"
+                                                            key={valueIndex}
+                                                        >
+                                                            <div
+                                                                className={
+                                                                    "box border shadow rounded p-2 d-flex align-items-end justify-content-end " +
+                                                                    key[0]
+                                                                }
+                                                            >
+                                                                <h5 className="m-0">
+                                                                    {value}
+                                                                </h5>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                )
-                                            )}
+                                                    )
+                                                )}
+                                            </div>
                                         </div>
-                                    </div>
-                                )
-                            )}
+                                    )
+                                )}
+                        </div>
                     </div>
 
                     <hr />
 
                     <div className="generated-playlist-order-area">
-                        <h2 className="mb-1">Generated Playlist Order Data</h2>
+                        <h3 className="mb-1">Generated Playlist Order Data</h3>
                         <p className="mb-4">
                             Spacer algorithm results based on user input
                         </p>
@@ -142,8 +149,16 @@ export default function Home() {
                         <div className="row">
                             {generatedPlaylistOrderData.map(
                                 (value, valueIndex) => (
-                                    <div className="col-lg-1" key={valueIndex}>
-                                        <div className="box shadow rounded p-2 d-flex align-items-end justify-content-end">
+                                    <div
+                                        className="col-lg-1 mb-3"
+                                        key={valueIndex}
+                                    >
+                                        <div
+                                            className={
+                                                "box border shadow rounded p-2 d-flex align-items-end justify-content-end " +
+                                                value[0]
+                                            }
+                                        >
                                             <h5 className="m-0">{value}</h5>
                                         </div>
                                     </div>

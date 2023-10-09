@@ -1,3 +1,5 @@
+import "@/styles/globals.css";
+
 export default function ContentCard(props) {
     const { contentId } = props;
 

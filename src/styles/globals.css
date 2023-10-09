@@ -1,3 +1,20 @@
 .box {
     height: 60px;
+    color: #fff;
+}
+
+.d {
+    background-color: rgb(218, 113, 47);
+}
+
+.h {
+    background-color: rgb(159, 181, 34);
+}
+
+.a {
+    background-color: rgb(23, 65, 193);
+}
+
+.f {
+    background-color: rgb(37, 191, 191);
 }

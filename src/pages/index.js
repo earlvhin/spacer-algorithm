@@ -42,26 +42,39 @@ export default function Home() {
                 const assetCount = generatedPlaylistContents[c].length;
 
                 /** Setting Up Starting Point */
+                let assetCounter = 0;
                 let startIndex =
                     historyIndex[c] + 1 < assetCount ? historyIndex[c] + 1 : 0;
 
-                console.log("startIndex", c, startIndex);
-
                 for (let cIteration = 0; cIteration < algoCount; cIteration++) {
-                    const startIndexComputed = startIndex + cIteration;
-                    const start =
-                        startIndexComputed < assetCount
-                            ? startIndexComputed
-                            : 0;
+                    let startIndexComputed = startIndex + assetCounter;
+                    let start = startIndexComputed;
+
+                    if (startIndexComputed >= assetCount) {
+                        start = 0;
+                        startIndex = 0;
+                        assetCounter = 0;
+                    }
 
                     /** Picked Content by Algorithm */
                     const cAlgo = generatedPlaylistContents[c][start];
+
+                    console.log({
+                        c,
+                        assetCounter,
+                        startIndex,
+                        cIteration,
+                        startIndexComputed,
+                        start,
+                        cAlgo,
+                    });
 
                     /** Populating Playlist Order */
                     generatedPlaylistOrder.push(cAlgo);
 
                     /** Setting Asset Index History */
                     historyIndex[c] = start;
+                    assetCounter++;
                 }
             }
         }
@@ -115,7 +128,7 @@ export default function Home() {
                                                 {generatedContentData[key].map(
                                                     (value, valueIndex) => (
                                                         <div
-                                                            className="col-lg-2"
+                                                            className="col-lg-2 mb-3"
                                                             key={valueIndex}
                                                         >
                                                             <div

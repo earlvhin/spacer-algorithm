@@ -98,7 +98,7 @@ export default function Home() {
             </Head>
             <main>
                 <div className="container pt-4">
-                    <h3 className="mb-1">Spacer Algo v1.0.0</h3>
+                    <h3 className="mb-1">Spacer Algo v1.0.1</h3>
                     <p className="mb-4">
                         Showcasing the power of automated playlist content
                         ordering

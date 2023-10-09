@@ -65,6 +65,10 @@ export default function SetupForm(props) {
                             </div>
                         </div>
                     </div>
+
+                    <small>
+                        <i>{"algo should be less or equal asset"}</i>
+                    </small>
                 </div>
 
                 <div className="col-lg-3">
@@ -92,6 +96,10 @@ export default function SetupForm(props) {
                                 />
                             </div>
                         </div>
+
+                        <small>
+                            <i>{"algo should be less or equal asset"}</i>
+                        </small>
                     </div>
                 </div>
 
@@ -123,6 +131,10 @@ export default function SetupForm(props) {
                                 />
                             </div>
                         </div>
+
+                        <small>
+                            <i>{"algo should be less or equal asset"}</i>
+                        </small>
                     </div>
                 </div>
 
@@ -152,6 +164,10 @@ export default function SetupForm(props) {
                                 />
                             </div>
                         </div>
+
+                        <small>
+                            <i>{"algo should be less or equal asset"}</i>
+                        </small>
                     </div>
                 </div>
             </div>

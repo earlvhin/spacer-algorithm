@@ -39,12 +39,15 @@ export default function SetupForm(props) {
             <div className="row align-items-end mb-3">
                 <div className="col-lg-3">
                     <div className="form-field">
-                        <label htmlFor="dealerAsset" className="form-label">
-                            Dealer Assets
-                        </label>
-
                         <div className="row g-0">
+                            <h5>Dealer</h5>
                             <div className="col-lg-6">
+                                <label
+                                    htmlFor="dealerAsset"
+                                    className="form-label"
+                                >
+                                    Assets Count
+                                </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
@@ -55,6 +58,12 @@ export default function SetupForm(props) {
                             </div>
 
                             <div className="col-lg-6">
+                                <label
+                                    htmlFor="dealerAlgoCount"
+                                    className="form-label"
+                                >
+                                    Algo Count
+                                </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
@@ -73,11 +82,15 @@ export default function SetupForm(props) {
 
                 <div className="col-lg-3">
                     <div className="form-field">
-                        <label htmlFor="hostAssets" className="form-label">
-                            Host Assets
-                        </label>
                         <div className="row g-0">
+                            <h5>Host</h5>
                             <div className="col-lg-6">
+                                <label
+                                    htmlFor="hostAssets"
+                                    className="form-label"
+                                >
+                                    Asset Count
+                                </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
@@ -87,6 +100,12 @@ export default function SetupForm(props) {
                                 />
                             </div>
                             <div className="col-lg-6">
+                                <label
+                                    htmlFor="hostAlgoCount"
+                                    className="form-label"
+                                >
+                                    Algo Count
+                                </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
@@ -105,14 +124,15 @@ export default function SetupForm(props) {
 
                 <div className="col-lg-3">
                     <div className="form-field">
-                        <label
-                            htmlFor="advertiserAssets"
-                            className="form-label"
-                        >
-                            Advertiser Assets
-                        </label>
                         <div className="row g-0">
+                            <h5>Advertiser</h5>
                             <div className="col-lg-6">
+                                <label
+                                    htmlFor="advertiserAssets"
+                                    className="form-label"
+                                >
+                                    Asset Count
+                                </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
@@ -122,6 +142,12 @@ export default function SetupForm(props) {
                                 />
                             </div>
                             <div className="col-lg-6">
+                                <label
+                                    htmlFor="advertiserAlgoCount"
+                                    className="form-label"
+                                >
+                                    Algo Count
+                                </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
@@ -140,12 +166,15 @@ export default function SetupForm(props) {
 
                 <div className="col-lg-3">
                     <div className="form-field">
-                        <label htmlFor="fillerAssets" className="form-label">
-                            Filler Assets
-                        </label>
-
                         <div className="row g-0">
+                            <h5>Filler</h5>
                             <div className="col-lg-6">
+                                <label
+                                    htmlFor="fillerAssets"
+                                    className="form-label"
+                                >
+                                    Asset Count
+                                </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
@@ -155,6 +184,12 @@ export default function SetupForm(props) {
                                 />
                             </div>
                             <div className="col-lg-6">
+                                <label
+                                    htmlFor="fillerAlgoCount"
+                                    className="form-label"
+                                >
+                                    Algo Count
+                                </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"

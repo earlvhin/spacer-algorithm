@@ -36,7 +36,8 @@ export default function Home() {
         setGeneratedContentData(generatedPlaylistContents);
 
         /** Setting up algo results */
-        while (!areAllContentsUsed(generatedPlaylistOrder, playlistContents)) {
+        let maxIteration = 0
+        while (maxIteration < 5) {
             for (const c in contentData) {
                 const algoCount = contentData[c].algo;
                 const assetCount = generatedPlaylistContents[c].length;
@@ -77,6 +78,8 @@ export default function Home() {
                     assetCounter++;
                 }
             }
+            
+            maxIteration++;
         }
 
         setPlaylistOrder(generatedPlaylistOrder);

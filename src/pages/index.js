@@ -37,7 +37,7 @@ export default function Home() {
 
         /** Setting up algo results */
         let maxIteration = 0
-        while (maxIteration < 5) {
+        while (!areAllContentsUsed(generatedPlaylistOrder, playlistContents)) {
             for (const c in contentData) {
                 const algoCount = contentData[c].algo;
                 const assetCount = generatedPlaylistContents[c].length;
@@ -78,7 +78,7 @@ export default function Home() {
                     assetCounter++;
                 }
             }
-            
+
             maxIteration++;
         }
 
@@ -101,7 +101,7 @@ export default function Home() {
             </Head>
             <main>
                 <div className="container pt-4">
-                    <h3 className="mb-1">Spacer Algo v1.0.1</h3>
+                    <h3 className="mb-1">Spacer Algo v1.0.2</h3>
                     <p className="mb-4">
                         Showcasing the power of automated playlist content
                         ordering

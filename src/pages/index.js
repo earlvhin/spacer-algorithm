@@ -7,10 +7,12 @@ import SetupForm from "@/components/setup-form";
 export default function Home() {
     const [generatedContentData, setGeneratedContentData] = useState(null);
     const [generatedPlaylistOrderData, setPlaylistOrder] = useState([]);
+    const [generatedRandomPlaylistOrderData, setRandomPlaylistOrder] = useState([]);
 
     function generateContenData(contentData) {
         const generatedPlaylistContents = {};
         const generatedPlaylistOrder = [];
+        const generatedRandomPlaylistOrder = [];
         const historyIndex = {};
         let playlistContents = [];
 
@@ -18,6 +20,10 @@ export default function Home() {
         const areAllContentsUsed = (firstArray, secondArray) => {
             return secondArray.every((element) => firstArray.includes(element));
         };
+
+        const compareRandom = (a, b) => {
+            return Math.random() - 0.5;
+        }
 
         /** Generating/Sorting Playlist Contents */
         for (const c in contentData) {
@@ -38,6 +44,8 @@ export default function Home() {
         /** Setting up algo results */
         let maxIteration = 0
         while (!areAllContentsUsed(generatedPlaylistOrder, playlistContents)) {
+            const playlistContentRandomizer = [];
+
             for (const c in contentData) {
                 const algoCount = contentData[c].algo;
                 const assetCount = generatedPlaylistContents[c].length;
@@ -70,8 +78,11 @@ export default function Home() {
                         cAlgo,
                     });
 
-                    /** Populating Playlist Order */
+                    // Straight
                     generatedPlaylistOrder.push(cAlgo);
+
+                    /** Randomizer */
+                    playlistContentRandomizer.push(cAlgo);
 
                     /** Setting Asset Index History */
                     historyIndex[c] = start;
@@ -79,11 +90,11 @@ export default function Home() {
                 }
             }
 
-            maxIteration++;
+            generatedRandomPlaylistOrder.push(playlistContentRandomizer.sort(compareRandom));
         }
 
         setPlaylistOrder(generatedPlaylistOrder);
-        console.log("generatedPlaylistOrder ==>", generatedPlaylistOrder);
+        setRandomPlaylistOrder(generatedRandomPlaylistOrder.flat());
     }
 
     return (
@@ -162,8 +173,30 @@ export default function Home() {
                             Spacer algorithm results based on user input
                         </p>
 
-                        <div className="row">
+                        <h4>Straight</h4>
+                        <div className="row mb-4">
                             {generatedPlaylistOrderData.map(
+                                (value, valueIndex) => (
+                                    <div
+                                        className="col-lg-1 mb-3"
+                                        key={valueIndex}
+                                    >
+                                        <div
+                                            className={
+                                                "box border shadow rounded p-2 d-flex align-items-end justify-content-end " +
+                                                value[0]
+                                            }
+                                        >
+                                            <h5 className="m-0">{value}</h5>
+                                        </div>
+                                    </div>
+                                )
+                            )}
+                        </div>
+
+                        <h4>Randomized</h4>
+                            <div className="row">
+                            {generatedRandomPlaylistOrderData.map(
                                 (value, valueIndex) => (
                                     <div
                                         className="col-lg-1 mb-3"

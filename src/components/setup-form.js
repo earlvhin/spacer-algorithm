@@ -40,26 +40,25 @@ export default function SetupForm(props) {
                 <div className="col-lg-3">
                     <div className="form-field">
                         <div className="row g-0">
-                            <h5>Dealer</h5>
+                            <h5>Advertiser</h5>
                             <div className="col-lg-6">
                                 <label
-                                    htmlFor="dealerAsset"
+                                    htmlFor="advertiserAssets"
                                     className="form-label"
                                 >
-                                    Assets Count
+                                    Asset Count
                                 </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
-                                    id="dealerAsset"
+                                    id="advertiserAssetsCount"
                                     placeholder="Asset Count"
-                                    ref={dealerAssetCount}
+                                    ref={advertiserAssetCount}
                                 />
                             </div>
-
                             <div className="col-lg-6">
                                 <label
-                                    htmlFor="dealerAlgoCount"
+                                    htmlFor="advertiserAlgoCount"
                                     className="form-label"
                                 >
                                     Algo Count
@@ -67,17 +66,17 @@ export default function SetupForm(props) {
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
-                                    id="dealerAlgo"
+                                    id="advertiserAlgoCount"
                                     placeholder="Algo Count"
-                                    ref={dealerAlgoCount}
+                                    ref={advertiserAlgoCount}
                                 />
                             </div>
                         </div>
-                    </div>
 
-                    <small>
-                        <i>{"algo should be less or equal asset"}</i>
-                    </small>
+                        <small>
+                            <i>{"algo should be less or equal asset"}</i>
+                        </small>
+                    </div>
                 </div>
 
                 <div className="col-lg-3">
@@ -125,25 +124,26 @@ export default function SetupForm(props) {
                 <div className="col-lg-3">
                     <div className="form-field">
                         <div className="row g-0">
-                            <h5>Advertiser</h5>
+                            <h5>Dealer</h5>
                             <div className="col-lg-6">
                                 <label
-                                    htmlFor="advertiserAssets"
+                                    htmlFor="dealerAsset"
                                     className="form-label"
                                 >
-                                    Asset Count
+                                    Assets Count
                                 </label>
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
-                                    id="advertiserAssetsCount"
+                                    id="dealerAsset"
                                     placeholder="Asset Count"
-                                    ref={advertiserAssetCount}
+                                    ref={dealerAssetCount}
                                 />
                             </div>
+
                             <div className="col-lg-6">
                                 <label
-                                    htmlFor="advertiserAlgoCount"
+                                    htmlFor="dealerAlgoCount"
                                     className="form-label"
                                 >
                                     Algo Count
@@ -151,18 +151,18 @@ export default function SetupForm(props) {
                                 <input
                                     type="number"
                                     className="form-control rounded-0"
-                                    id="advertiserAlgoCount"
+                                    id="dealerAlgo"
                                     placeholder="Algo Count"
-                                    ref={advertiserAlgoCount}
+                                    ref={dealerAlgoCount}
                                 />
                             </div>
                         </div>
-
-                        <small>
-                            <i>{"algo should be less or equal asset"}</i>
-                        </small>
                     </div>
-                </div>
+
+                    <small>
+                        <i>{"algo should be less or equal asset"}</i>
+                    </small>
+                </div>                
 
                 <div className="col-lg-3">
                     <div className="form-field">

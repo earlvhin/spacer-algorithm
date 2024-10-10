@@ -15,17 +15,17 @@ export default function SetupForm(props) {
         event.preventDefault();
 
         props.onDataSubmit({
-            dealer: {
-                asset: parseInt(dealerAssetCount.current.value),
-                algo: parseInt(dealerAlgoCount.current.value),
+            advertiser: {
+                asset: parseInt(advertiserAssetCount.current.value),
+                algo: parseInt(advertiserAlgoCount.current.value),
             },
             host: {
                 asset: parseInt(hostAssetCount.current.value),
                 algo: parseInt(hostAlgoCount.current.value),
             },
-            advertiser: {
-                asset: parseInt(advertiserAssetCount.current.value),
-                algo: parseInt(advertiserAlgoCount.current.value),
+            dealer: {
+                asset: parseInt(dealerAssetCount.current.value),
+                algo: parseInt(dealerAlgoCount.current.value),
             },
             filler: {
                 asset: parseInt(fillerAssetCount.current.value),
